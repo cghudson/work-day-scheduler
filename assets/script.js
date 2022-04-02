@@ -1,4 +1,4 @@
-//display current date on page load
+// display current date on page load
 var updateDate = function () {
     document.getElementById("currentDay")
     .innerHTML = moment().format("MMMM Do YYYY, h:mm:ss a")
