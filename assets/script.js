@@ -6,16 +6,38 @@ var updateDate = function () {
 setInterval(updateDate, 1000);
 
 $(document).ready(function() {
+    //assign past, present, or future to timeblocks
+    function scheduleTime() {
+        var hour = moment().hour()
+        
+        $(".time-block").each(function() {
+            var workTime = $(this).attr("id")
+
+            if (workTime < hour) {
+                $(this).removeClass("future")
+                $(this).removeClass("present")
+                $(this).addClass("past")
+            } else if (workTime === hour) {
+                $(this).removeClass("future")
+                $(this).removeClass("past")
+                $(this).addClass("present")
+            } else {
+                $(this).removeClass("present")
+                $(this).removeClass("past")
+                $(this).addClass("future")
+            }
+        })
+    }
+    
+    //save to local storage
     $(".saveBtn").click(function() {
         var time = $(this).parent().attr("id")
         var task = $(this).siblings(".description").val()
         
         localStorage.setItem(time, task)
     })
-})
-//display time blocks for standard business hours
-//color code times blocks - past, present, future
 
-//when timeblock clidked, enter event info
-//click save button to save to local storate
+    scheduleTime()
+})
+
 // data from event persists when page refreshed
