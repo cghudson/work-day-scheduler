@@ -5,8 +5,14 @@ var updateDate = function () {
 }
 setInterval(updateDate, 1000);
 
-
-
+$(document).ready(function() {
+    $(".saveBtn").click(function() {
+        var time = $(this).parent().attr("id")
+        var task = $(this).siblings(".description").val()
+        
+        localStorage.setItem(time, task)
+    })
+})
 //display time blocks for standard business hours
 //color code times blocks - past, present, future
 
