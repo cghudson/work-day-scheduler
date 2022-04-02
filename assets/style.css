@@ -21,6 +21,10 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+#currentDay {
+  font-weight: bold;
+}
+
 .description{
   white-space: pre-wrap;
 }
@@ -40,6 +44,8 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  font-weight: bold;
+  padding-top: 2.5%;
 }
 
 .past {
@@ -69,3 +75,4 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
