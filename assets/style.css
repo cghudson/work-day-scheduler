@@ -46,6 +46,7 @@ textarea{
   border-top: 1px dashed #000000;
   font-weight: bold;
   padding-top: 2.5%;
+  word-wrap: wrap; 
 }
 
 .past {
@@ -71,8 +72,18 @@ textarea{
   color: white;
 }
 
+
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+.clear {
+  border-radius: 12px;
+  background: black;
+  color: white;
+  padding: 1%;
+  margin: 2%;
+  margin-left: 48%;
 }
 
